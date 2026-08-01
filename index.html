@@ -49,6 +49,19 @@
   .key i{font-style:normal;display:inline-flex;align-items:center;gap:6px}
   .key .sw{width:16px;border-top:2px solid;display:inline-block}
   .key .sq{width:11px;height:11px;border-radius:50%;display:inline-block}
+  .doclink{display:flex;align-items:center;gap:12px;margin:14px 0 0;padding:12px 14px;
+    border:2px solid var(--ink);background:#fff;text-decoration:none;color:var(--ink)}
+  .doclink:hover{background:#F1EFEA}
+  .doclink:focus-visible{outline:3px solid var(--flag);outline-offset:2px}
+  .doclink .ico{flex:0 0 auto;width:30px;height:38px;border:2px solid var(--ink);
+    border-radius:2px;position:relative;background:#FBFAF7}
+  .doclink .ico:after{content:"PDF";position:absolute;left:0;right:0;bottom:3px;
+    text-align:center;font-size:8px;letter-spacing:.06em;color:var(--ink)}
+  .doclink .ico:before{content:"";position:absolute;top:5px;left:5px;right:5px;height:2px;
+    background:var(--rule);box-shadow:0 5px 0 var(--rule),0 10px 0 var(--rule)}
+  .doclink .txt{min-width:0}
+  .doclink .t1{font-family:var(--serif);font-size:16px;line-height:1.25;display:block}
+  .doclink .t2{font-size:11.5px;color:var(--muted);display:block;margin-top:3px;line-height:1.4}
   .approx{margin:10px 0 0;padding:9px 11px;border-left:3px solid var(--flag);
     background:#fff;font-size:11.5px;line-height:1.5;color:#42463F}
   .legend{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
@@ -118,6 +131,15 @@
     <button class="tog" id="tNum" aria-pressed="false">Tree numbers</button>
     <button class="tog" id="tVar" aria-pressed="false">Varieties</button>
   </div>
+
+  <a class="doclink" href="Georgina-Island-First-Nation-Orchard.pdf" target="_blank" rel="noopener">
+    <span class="ico" aria-hidden="true"></span>
+    <span class="txt">
+      <span class="t1">Georgina Island First Nation Orchard &mdash; Management Guide</span>
+      <span class="t2">The full 35-page guide: planting record, pollination, spray program, pruning,
+        watering, grafting, variety notes and the year-round calendar. Opens as a PDF.</span>
+    </span>
+  </a>
 
   <div class="plan">
     <svg id="map" xmlns="http://www.w3.org/2000/svg" role="img"
